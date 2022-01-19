@@ -114,7 +114,17 @@ struct NetworkService {
                 if let error = err {
                     completion(.failure(error))
                 } else {
-                    completion(.success("Habit Successfully Deleted"))
+                    let deletedHabit = habit
+                    deletedHabit.time = []
+                    self.scheduleNotification(habit: deletedHabit) { error in
+                        if let error = error {
+                            self.createHabit(habit) { _ in
+                                completion(.failure(error))
+                            }
+                        } else {
+                            completion(.success("Habit Successfully Deleted"))
+                        }
+                    }
                 }
             }
     }
@@ -151,25 +161,30 @@ struct NetworkService {
 // MARK:- Our Backend
 extension NetworkService {
     private func scheduleNotification(habit: CreateForm, completion: @escaping(Error?) -> Void) {
-        guard let userId = Auth.auth().currentUser?.uid else { return }
         let params: [String: Any] = [
             "title": habit.title,
             "token": UserDefaults.standard.string(forKey: "fcmToken") ?? "",
             "days": habit.days,
             "times": habit.time,
-            "userId": userId,
+            "userId": habit.id,
         ]
         
         var url = URLRequest(url: URL(string: "https://nutureit.herokuapp.com/api/v1/users/schedule-notification")!)
         url.httpBody = try? JSONSerialization.data(withJSONObject: params, options: .fragmentsAllowed)
+        url.httpMethod = "POST"
+        url.allHTTPHeaderFields = ["Content-Type": "application/json"]
         
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let _ = error {
-                completion(AppError.scheduleNotificationFailed)
+                DispatchQueue.main.async {
+                    completion(AppError.scheduleNotificationFailed)
+                }
                 return
             }
-            
-            completion(nil)
+            print()
+            DispatchQueue.main.async {
+                completion(nil)
+            }
         }.resume()
     }
 }
