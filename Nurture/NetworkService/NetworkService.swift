@@ -17,6 +17,17 @@ enum FirebaseCollection: String {
     case habits
 }
 
+enum AppError: LocalizedError {
+    case scheduleNotificationFailed
+    
+    var errorDescription: String? {
+        switch self {
+        case .scheduleNotificationFailed:
+            return "Error scheduling notification"
+        }
+    }
+}
+
 struct NetworkService {
     
     public static let shared = NetworkService()
@@ -56,7 +67,15 @@ struct NetworkService {
                 if let error = err {
                     completion(.failure(error))
                 } else {
-                    completion(.success("Habit Successfully Created"))
+                    self.scheduleNotification(habit: habit) { error in
+                        if let error = error {
+                            self.deleteHabit(habit) { _ in
+                                completion(.failure(error))
+                            }
+                        } else {
+                            completion(.success("Habit Successfully Created"))
+                        }
+                    }
                 }
             }
     }
@@ -72,7 +91,15 @@ struct NetworkService {
                 if let error = err {
                     completion(.failure(error))
                 } else {
-                    completion(.success("Habit Successfully Updated"))
+                    self.scheduleNotification(habit: habit) { error in
+                        if let error = error {
+                            self.deleteHabit(habit) { _ in
+                                completion(.failure(error))
+                            }
+                        } else {
+                            completion(.success("Habit Successfully Updated"))
+                        }
+                    }
                 }
             }
     }
@@ -118,5 +145,31 @@ struct NetworkService {
                 }
             }
         
+    }
+}
+
+// MARK:- Our Backend
+extension NetworkService {
+    private func scheduleNotification(habit: CreateForm, completion: @escaping(Error?) -> Void) {
+        guard let userId = Auth.auth().currentUser?.uid else { return }
+        let params: [String: Any] = [
+            "title": habit.title,
+            "token": UserDefaults.standard.string(forKey: "fcmToken") ?? "",
+            "days": habit.days,
+            "times": habit.time,
+            "userId": userId,
+        ]
+        
+        var url = URLRequest(url: URL(string: "https://nutureit.herokuapp.com/api/v1/users/schedule-notification")!)
+        url.httpBody = try? JSONSerialization.data(withJSONObject: params, options: .fragmentsAllowed)
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let _ = error {
+                completion(AppError.scheduleNotificationFailed)
+                return
+            }
+            
+            completion(nil)
+        }.resume()
     }
 }
