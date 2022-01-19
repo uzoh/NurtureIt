@@ -12,9 +12,7 @@
 import UIKit
 
 class CustomiseScheduleViewController: UIViewController {
-    @IBOutlet weak var nicknameTxt: UITextField!
-    
-    
+   
     @IBOutlet weak var sundayWeekBtn: UIButton!
     @IBOutlet weak var mondayWeekBtn: UIButton!
     @IBOutlet weak var tuesdayWeekBtn: UIButton!
@@ -33,18 +31,18 @@ class CustomiseScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedItems = form.days
-        
+
         for day in selectedItems {
             switch day {
             case "Sunday":
                 updateButtonBackground(sundayWeekBtn, isSelected: true)
             case "Monday":
                 updateButtonBackground(mondayWeekBtn, isSelected: true)
-            case "Tueday":
+            case "Tuesday":
                 updateButtonBackground(tuesdayWeekBtn, isSelected: true)
             case "Wednesday":
                 updateButtonBackground(wednesdayWeekBtn, isSelected: true)
-            case "Thurday":
+            case "Thursday":
                 updateButtonBackground(thursdayWeekBtn, isSelected: true)
             case "Friday":
                 updateButtonBackground(fridayWeekBtn, isSelected: true)

@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12BA6992277F24E20044DA8C /* EmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BA6991277F24E20044DA8C /* EmojiViewController.swift */; };
+		12BA6995277F27840044DA8C /* EmojiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BA6994277F27840044DA8C /* EmojiCollectionViewCell.swift */; };
+		12C1A133277C947600C4DCA3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1A132277C947600C4DCA3 /* NetworkService.swift */; };
+		12C1A135277C9D0700C4DCA3 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1A134277C9D0700C4DCA3 /* Encodable+Extension.swift */; };
+		EC0BA21725E54A8F0052AF06 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0BA21625E54A8F0052AF06 /* DesignableView.swift */; };
+		EC0BA21A25E5535C0052AF06 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0BA21925E5535C0052AF06 /* SignupViewController.swift */; };
+		EC373BFB26BD1F9B00612B29 /* ReminderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC373BFA26BD1F9B00612B29 /* ReminderCollectionViewCell.swift */; };
+		EC53B1182774BC7600A64860 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC53B1172774BC7500A64860 /* GoogleService-Info.plist */; };
+		EC5976DC26F627A6001CC101 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5976DB26F627A5001CC101 /* UIColor.swift */; };
+		EC5C8C392678C3FD0054B304 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5C8C382678C3FD0054B304 /* CardView.swift */; };
+		EC5C8C3F2678C5870054B304 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5C8C3E2678C5870054B304 /* UIView+Extension.swift */; };
+		EC62CA322639EBA600091637 /* CreateScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC62CA312639EBA600091637 /* CreateScheduleViewController.swift */; };
+		EC62CA36263D6BED00091637 /* alarmClock.json in Resources */ = {isa = PBXBuildFile; fileRef = EC62CA35263D6BEC00091637 /* alarmClock.json */; };
+		EC7382342672BC1400768B8D /* DashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7382332672BC1300768B8D /* DashBoard.swift */; };
+		EC760E6B26A2D19100FFC158 /* Pods_Nurture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE1FD022FCEA0BAD9D6C7A7 /* Pods_Nurture.framework */; };
+		EC7DB5D52699CF050075CDF8 /* HabitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7DB5D32699CF050075CDF8 /* HabitCollectionViewCell.swift */; };
+		EC7DB5D62699CF050075CDF8 /* HabitCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC7DB5D42699CF050075CDF8 /* HabitCollectionViewCell.xib */; };
+		EC7F06D226515ACD00751F3D /* CustomiseScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7F06D126515ACC00751F3D /* CustomiseScheduleViewController.swift */; };
+		EC7F06D526515B2600751F3D /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7F06D426515B2600751F3D /* NotificationViewController.swift */; };
+		ECB58DC727159F4900CEED58 /* CreateForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB58DC627159F4900CEED58 /* CreateForm.swift */; };
+		ECCF213B25E52F7D00691192 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCF213A25E52F7D00691192 /* AppDelegate.swift */; };
+		ECCF213D25E52F7D00691192 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCF213C25E52F7D00691192 /* SceneDelegate.swift */; };
+		ECCF213F25E52F7D00691192 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCF213E25E52F7D00691192 /* LoginViewController.swift */; };
+		ECCF214225E52F7D00691192 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECCF214025E52F7D00691192 /* Main.storyboard */; };
+		ECCF214425E52F8F00691192 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECCF214325E52F8F00691192 /* Assets.xcassets */; };
+		ECCF214725E52F8F00691192 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECCF214525E52F8F00691192 /* LaunchScreen.storyboard */; };
+		ECD4B2C92652B8E70036ADAB /* CustomiseManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD4B2C82652B8E70036ADAB /* CustomiseManager .swift */; };
+		ECE6068826550B2A00ADBD43 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE6068726550B2A00ADBD43 /* DashBoardViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		12BA6991277F24E20044DA8C /* EmojiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewController.swift; sourceTree = "<group>"; };
+		12BA6994277F27840044DA8C /* EmojiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCollectionViewCell.swift; sourceTree = "<group>"; };
+		12C1A132277C947600C4DCA3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		12C1A134277C9D0700C4DCA3 /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
+		1FE1FD022FCEA0BAD9D6C7A7 /* Pods_Nurture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nurture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF3F69C6C12FC7BF47119D1B /* Pods-Nurture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nurture.release.xcconfig"; path = "Target Support Files/Pods-Nurture/Pods-Nurture.release.xcconfig"; sourceTree = "<group>"; };
+		B7C58A616513D3188D19BCBA /* Pods-Nurture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nurture.debug.xcconfig"; path = "Target Support Files/Pods-Nurture/Pods-Nurture.debug.xcconfig"; sourceTree = "<group>"; };
+		EC0BA21625E54A8F0052AF06 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DesignableView.swift; path = "../New Group/DesignableView.swift"; sourceTree = "<group>"; };
+		EC0BA21925E5535C0052AF06 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		EC29E036278EEBF400CC565B /* Nurture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nurture.entitlements; sourceTree = "<group>"; };
+		EC373BFA26BD1F9B00612B29 /* ReminderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCollectionViewCell.swift; sourceTree = "<group>"; };
+		EC53B1172774BC7500A64860 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EC5976DB26F627A5001CC101 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		EC5C8C382678C3FD0054B304 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		EC5C8C3E2678C5870054B304 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		EC62CA312639EBA600091637 /* CreateScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScheduleViewController.swift; sourceTree = "<group>"; };
+		EC62CA35263D6BEC00091637 /* alarmClock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = alarmClock.json; sourceTree = "<group>"; };
+		EC7382332672BC1300768B8D /* DashBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoard.swift; sourceTree = "<group>"; };
+		EC7DB5D32699CF050075CDF8 /* HabitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCollectionViewCell.swift; sourceTree = "<group>"; };
+		EC7DB5D42699CF050075CDF8 /* HabitCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitCollectionViewCell.xib; sourceTree = "<group>"; };
+		EC7F06D126515ACC00751F3D /* CustomiseScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomiseScheduleViewController.swift; sourceTree = "<group>"; };
+		EC7F06D426515B2600751F3D /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		ECB58DC627159F4900CEED58 /* CreateForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateForm.swift; sourceTree = "<group>"; };
+		ECCF213725E52F7D00691192 /* Nurture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nurture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECCF213A25E52F7D00691192 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ECCF213C25E52F7D00691192 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		ECCF213E25E52F7D00691192 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ECCF214125E52F7D00691192 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ECCF214325E52F8F00691192 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ECCF214625E52F8F00691192 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ECCF214825E52F8F00691192 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECD4B2C82652B8E70036ADAB /* CustomiseManager .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomiseManager .swift"; sourceTree = "<group>"; };
+		ECE6068726550B2A00ADBD43 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECCF213425E52F7D00691192 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC760E6B26A2D19100FFC158 /* Pods_Nurture.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12BA6993277F24EF0044DA8C /* Emoji */ = {
+			isa = PBXGroup;
+			children = (
+				12BA6991277F24E20044DA8C /* EmojiViewController.swift */,
+				12BA6994277F27840044DA8C /* EmojiCollectionViewCell.swift */,
+			);
+			path = Emoji;
+			sourceTree = "<group>";
+		};
+		5E4186C2E888BF2ADF82EDC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FE1FD022FCEA0BAD9D6C7A7 /* Pods_Nurture.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7392794B09584C67204BB50A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7C58A616513D3188D19BCBA /* Pods-Nurture.debug.xcconfig */,
+				AF3F69C6C12FC7BF47119D1B /* Pods-Nurture.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EC0BA21425E5400F0052AF06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC7382332672BC1300768B8D /* DashBoard.swift */,
+				ECD4B2C82652B8E70036ADAB /* CustomiseManager .swift */,
+				ECB58DC627159F4900CEED58 /* CreateForm.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EC48483E268349A400131AB9 /* DesignableView */ = {
+			isa = PBXGroup;
+			children = (
+				EC0BA21625E54A8F0052AF06 /* DesignableView.swift */,
+			);
+			path = DesignableView;
+			sourceTree = "<group>";
+		};
+		EC48484326834A5200131AB9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				ECCF213E25E52F7D00691192 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EC48484426834A8F00131AB9 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				EC0BA21925E5535C0052AF06 /* SignupViewController.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		EC48484526834AA900131AB9 /* CreateSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				EC62CA312639EBA600091637 /* CreateScheduleViewController.swift */,
+			);
+			path = CreateSchedule;
+			sourceTree = "<group>";
+		};
+		EC48484626834ACF00131AB9 /* DaysOfWeekSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				EC7F06D126515ACC00751F3D /* CustomiseScheduleViewController.swift */,
+			);
+			path = DaysOfWeekSchedule;
+			sourceTree = "<group>";
+		};
+		EC48484726834ADE00131AB9 /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				EC7F06D426515B2600751F3D /* NotificationViewController.swift */,
+				EC373BFA26BD1F9B00612B29 /* ReminderCollectionViewCell.swift */,
+			);
+			path = Reminder;
+			sourceTree = "<group>";
+		};
+		EC48484926834B1700131AB9 /* DashBoard */ = {
+			isa = PBXGroup;
+			children = (
+				ECE6068726550B2A00ADBD43 /* DashBoardViewController.swift */,
+			);
+			path = DashBoard;
+			sourceTree = "<group>";
+		};
+		EC5C8C342678BFF10054B304 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EC7DB5D02699CE3D0075CDF8 /* HabitCollectionViewCell */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		EC5C8C362678C3C50054B304 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				EC48483E268349A400131AB9 /* DesignableView */,
+				EC5C8C372678C3D20054B304 /* CardView */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		EC5C8C372678C3D20054B304 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				EC5C8C382678C3FD0054B304 /* CardView.swift */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
+		EC5C8C3D2678C5580054B304 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EC5C8C3E2678C5870054B304 /* UIView+Extension.swift */,
+				EC5976DB26F627A5001CC101 /* UIColor.swift */,
+				12C1A134277C9D0700C4DCA3 /* Encodable+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EC7DB5D02699CE3D0075CDF8 /* HabitCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EC7DB5D32699CF050075CDF8 /* HabitCollectionViewCell.swift */,
+				EC7DB5D42699CF050075CDF8 /* HabitCollectionViewCell.xib */,
+			);
+			path = HabitCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		ECCF212E25E52F7C00691192 = {
+			isa = PBXGroup;
+			children = (
+				ECCF213925E52F7D00691192 /* Nurture */,
+				ECCF213825E52F7D00691192 /* Products */,
+				7392794B09584C67204BB50A /* Pods */,
+				5E4186C2E888BF2ADF82EDC4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ECCF213825E52F7D00691192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECCF213725E52F7D00691192 /* Nurture.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECCF213925E52F7D00691192 /* Nurture */ = {
+			isa = PBXGroup;
+			children = (
+				EC29E036278EEBF400CC565B /* Nurture.entitlements */,
+				EC53B1172774BC7500A64860 /* GoogleService-Info.plist */,
+				ECCF213A25E52F7D00691192 /* AppDelegate.swift */,
+				ECCF213C25E52F7D00691192 /* SceneDelegate.swift */,
+				ECCF214025E52F7D00691192 /* Main.storyboard */,
+				ECD8421B2783BBAE00749A2B /* NetworkService */,
+				EC5C8C3D2678C5580054B304 /* Extensions */,
+				EC5C8C342678BFF10054B304 /* CollectionViewCells */,
+				EC0BA21425E5400F0052AF06 /* Model */,
+				EC5C8C362678C3C50054B304 /* CustomViews */,
+				ECCF215025E52FE200691192 /* ViewController */,
+				ECCF214325E52F8F00691192 /* Assets.xcassets */,
+				ECCF214525E52F8F00691192 /* LaunchScreen.storyboard */,
+				ECCF214825E52F8F00691192 /* Info.plist */,
+				EC62CA35263D6BEC00091637 /* alarmClock.json */,
+			);
+			path = Nurture;
+			sourceTree = "<group>";
+		};
+		ECCF215025E52FE200691192 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC48484326834A5200131AB9 /* Login */,
+				EC48484426834A8F00131AB9 /* Signup */,
+				EC48484926834B1700131AB9 /* DashBoard */,
+				EC48484526834AA900131AB9 /* CreateSchedule */,
+				EC48484626834ACF00131AB9 /* DaysOfWeekSchedule */,
+				EC48484726834ADE00131AB9 /* Reminder */,
+				12BA6993277F24EF0044DA8C /* Emoji */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		ECD8421B2783BBAE00749A2B /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				12C1A132277C947600C4DCA3 /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECCF213625E52F7D00691192 /* Nurture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECCF214B25E52F8F00691192 /* Build configuration list for PBXNativeTarget "Nurture" */;
+			buildPhases = (
+				7CE02A825420FFB161925F11 /* [CP] Check Pods Manifest.lock */,
+				ECCF213325E52F7D00691192 /* Sources */,
+				ECCF213425E52F7D00691192 /* Frameworks */,
+				ECCF213525E52F7D00691192 /* Resources */,
+				208B05DD4AEA77F41C824359 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nurture;
+			packageProductDependencies = (
+			);
+			productName = Nurture;
+			productReference = ECCF213725E52F7D00691192 /* Nurture.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECCF212F25E52F7C00691192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					ECCF213625E52F7D00691192 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = ECCF213225E52F7C00691192 /* Build configuration list for PBXProject "Nurture" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ECCF212E25E52F7C00691192;
+			packageReferences = (
+			);
+			productRefGroup = ECCF213825E52F7D00691192 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECCF213625E52F7D00691192 /* Nurture */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECCF213525E52F7D00691192 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECCF214725E52F8F00691192 /* LaunchScreen.storyboard in Resources */,
+				ECCF214425E52F8F00691192 /* Assets.xcassets in Resources */,
+				EC62CA36263D6BED00091637 /* alarmClock.json in Resources */,
+				ECCF214225E52F7D00691192 /* Main.storyboard in Resources */,
+				EC7DB5D62699CF050075CDF8 /* HabitCollectionViewCell.xib in Resources */,
+				EC53B1182774BC7600A64860 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		208B05DD4AEA77F41C824359 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nurture/Pods-Nurture-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nurture/Pods-Nurture-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nurture/Pods-Nurture-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CE02A825420FFB161925F11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nurture-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECCF213325E52F7D00691192 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC0BA21725E54A8F0052AF06 /* DesignableView.swift in Sources */,
+				EC7F06D226515ACD00751F3D /* CustomiseScheduleViewController.swift in Sources */,
+				EC7F06D526515B2600751F3D /* NotificationViewController.swift in Sources */,
+				ECCF213F25E52F7D00691192 /* LoginViewController.swift in Sources */,
+				12C1A135277C9D0700C4DCA3 /* Encodable+Extension.swift in Sources */,
+				12C1A133277C947600C4DCA3 /* NetworkService.swift in Sources */,
+				EC0BA21A25E5535C0052AF06 /* SignupViewController.swift in Sources */,
+				12BA6995277F27840044DA8C /* EmojiCollectionViewCell.swift in Sources */,
+				EC5976DC26F627A6001CC101 /* UIColor.swift in Sources */,
+				ECE6068826550B2A00ADBD43 /* DashBoardViewController.swift in Sources */,
+				EC7382342672BC1400768B8D /* DashBoard.swift in Sources */,
+				EC5C8C392678C3FD0054B304 /* CardView.swift in Sources */,
+				12BA6992277F24E20044DA8C /* EmojiViewController.swift in Sources */,
+				EC5C8C3F2678C5870054B304 /* UIView+Extension.swift in Sources */,
+				EC373BFB26BD1F9B00612B29 /* ReminderCollectionViewCell.swift in Sources */,
+				EC7DB5D52699CF050075CDF8 /* HabitCollectionViewCell.swift in Sources */,
+				EC62CA322639EBA600091637 /* CreateScheduleViewController.swift in Sources */,
+				ECB58DC727159F4900CEED58 /* CreateForm.swift in Sources */,
+				ECCF213B25E52F7D00691192 /* AppDelegate.swift in Sources */,
+				ECCF213D25E52F7D00691192 /* SceneDelegate.swift in Sources */,
+				ECD4B2C92652B8E70036ADAB /* CustomiseManager .swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ECCF214025E52F7D00691192 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECCF214125E52F7D00691192 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ECCF214525E52F8F00691192 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECCF214625E52F8F00691192 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ECCF214925E52F8F00691192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ECCF214A25E52F8F00691192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECCF214C25E52F8F00691192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7C58A616513D3188D19BCBA /* Pods-Nurture.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Nurture/Nurture.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RT459C64W3;
+				INFOPLIST_FILE = Nurture/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uzohOkwara.Nurture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ECCF214D25E52F8F00691192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF3F69C6C12FC7BF47119D1B /* Pods-Nurture.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Nurture/Nurture.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RT459C64W3;
+				INFOPLIST_FILE = Nurture/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uzohOkwara.Nurture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECCF213225E52F7C00691192 /* Build configuration list for PBXProject "Nurture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECCF214925E52F8F00691192 /* Debug */,
+				ECCF214A25E52F8F00691192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECCF214B25E52F8F00691192 /* Build configuration list for PBXNativeTarget "Nurture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECCF214C25E52F8F00691192 /* Debug */,
+				ECCF214D25E52F8F00691192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECCF212F25E52F7C00691192 /* Project object */;
+}

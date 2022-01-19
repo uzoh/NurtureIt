@@ -6,3 +6,6 @@
 //
 
 import Foundation
+//struct CustomiseManager {
+//    let DaysTypeArray = ["Everyday", "Every other day", "Every Second day","Every other week","Every other month","Every other year"]
+//}

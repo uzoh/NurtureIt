@@ -1,0 +1,6 @@
+framework module Pods_Nurture {
+  umbrella header "Pods-Nurture-umbrella.h"
+
+  export *
+  module * { export * }
+}

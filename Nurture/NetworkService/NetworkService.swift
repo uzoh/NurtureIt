@@ -51,7 +51,7 @@ struct NetworkService {
             .collection(FirebaseCollection.users.rawValue)
             .document(uid)
             .collection(FirebaseCollection.habits.rawValue)
-            .document(UUID().uuidString)
+            .document(habit.id)
             .setData(habit.asDictionary) { err in
                 if let error = err {
                     completion(.failure(error))
@@ -61,7 +61,38 @@ struct NetworkService {
             }
     }
     
-    func fetchHabits(completion: @escaping(Result<[DashBoard], Error>) -> Void) {
+    func updateHabit(_ habit: CreateForm, completion: @escaping (Result<String, Error>) -> Void) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        database
+            .collection(FirebaseCollection.users.rawValue)
+            .document(uid)
+            .collection(FirebaseCollection.habits.rawValue)
+            .document(habit.id)
+            .setData(habit.asDictionary, merge: true) { err in
+                if let error = err {
+                    completion(.failure(error))
+                } else {
+                    completion(.success("Habit Successfully Updated"))
+                }
+            }
+    }
+    
+    func deleteHabit(_ habit: CreateForm, completion: @escaping (Result<String, Error>) -> Void) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        database
+            .collection(FirebaseCollection.users.rawValue)
+            .document(uid)
+            .collection(FirebaseCollection.habits.rawValue)
+            .document(habit.id).delete() { err in
+                if let error = err {
+                    completion(.failure(error))
+                } else {
+                    completion(.success("Habit Successfully Deleted"))
+                }
+            }
+    }
+    
+    func fetchHabits(completion: @escaping(Result<[CreateForm], Error>) -> Void) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         database
             .collection(FirebaseCollection.users.rawValue)
@@ -71,16 +102,21 @@ struct NetworkService {
                 if let error = err {
                     completion(.failure(error))
                 } else {
-                    var dashboards = [DashBoard]()
+                    var forms = [CreateForm]()
                     for document in querySnapshot!.documents {
                         let data = document.data()
+                        let id = (data["id"] as? String) ?? ""
                         let title = (data["title"] as? String) ?? ""
-                        let dashboard = DashBoard(title: title, image: UIImage())
-                        dashboards.append(dashboard)
+                        let time = (data["time"] as? [String]) ?? []
+                        let days = (data["days"] as? [String]) ?? []
+                        let emoji = (data["emoji"] as? String) ?? ""
+                        let createForm = CreateForm(id: id, title: title, time: time, days: days, emoji: emoji)
+                        forms.append(createForm)
+                       
                     }
-                    completion(.success(dashboards))
+                    completion(.success(forms))
                 }
             }
-            
+        
     }
 }
