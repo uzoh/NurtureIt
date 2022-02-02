@@ -26,8 +26,6 @@ class CustomiseScheduleViewController: UIViewController {
     
     var delegate: CreateScheduleDelegate!
     
-   // var customiseManager = CustomiseManager()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedItems = form.days
@@ -84,6 +82,7 @@ class CustomiseScheduleViewController: UIViewController {
     }
     
     @IBAction func DoneBtnPressed(_ sender: Any) {
+        form.days = []
         for day in selectedItems {
             form.days.append(day)
         }
