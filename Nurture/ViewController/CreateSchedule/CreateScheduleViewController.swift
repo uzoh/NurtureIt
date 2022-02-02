@@ -13,7 +13,7 @@ protocol CreateScheduleDelegate {
 }
 
 class CreateScheduleViewController: UIViewController {
-
+    
     @IBOutlet weak var trashBtn: UIBarButtonItem!
     @IBOutlet weak var createTitle: UITextField!
     @IBOutlet weak var reminderArrowBtn: UIButton!
@@ -76,17 +76,32 @@ class CreateScheduleViewController: UIViewController {
     }
     
     func deletePressed() {
-        ProgressHUD.show("Deleting Habit...")
-        NetworkService.shared.deleteHabit(form) { [weak self] result in
-            switch result {
-            case .success(let message):
-                ProgressHUD.showSucceed(message)
-                self?.navigationController?.popViewController(animated: true)
-            case .failure(let error):
-                ProgressHUD.showError(error.localizedDescription)
+        
+        let alert = UIAlertController(title: "Delete Habit", message: "Sure you want to delete?", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Delete", style: .default) { (action) in
+            // what will happen when the user clicks the Add buttion in the UIAlert
+            
+            ProgressHUD.show("Deleting Habit...")
+            NetworkService.shared.deleteHabit(self.form) { [weak self] result in
+                switch result {
+                case .success(let message):
+                    ProgressHUD.showSucceed(message)
+                    self?.navigationController?.popViewController(animated: true)
+                case .failure(let error):
+                    ProgressHUD.showError(error.localizedDescription)
+                }
             }
         }
+        let anotherAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            // what will happen when the user clicks the Add buttion in the UIAlert
+           
+        }
+        
+        alert.addAction(action)
+        alert.addAction(anotherAction)
+        present(alert, animated: true, completion: nil)
     }
+        
     
     func savePressed() {
         let title = createTitle.text
