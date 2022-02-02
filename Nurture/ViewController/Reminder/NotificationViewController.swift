@@ -39,6 +39,7 @@ class NotificationViewController: UIViewController {
     }
     
     @IBAction func NotificationBtn(_ sender: UIButton) {
+        form.time = []
         for time in selectedItems2 {
             form.time.append(time)
         }
