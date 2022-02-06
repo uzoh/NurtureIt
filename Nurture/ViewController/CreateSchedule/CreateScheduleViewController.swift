@@ -77,10 +77,9 @@ class CreateScheduleViewController: UIViewController {
     
     func deletePressed() {
         
-        let alert = UIAlertController(title: "Delete Habit", message: "Sure you want to delete?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Delete Habit", message: "Sure you want to delete habit?", preferredStyle: .alert)
         let action = UIAlertAction(title: "Delete", style: .default) { (action) in
-            // what will happen when the user clicks the Add buttion in the UIAlert
-            
+            // what will happen when the user clicks the Delete buttion in the UIAlert
             ProgressHUD.show("Deleting Habit...")
             NetworkService.shared.deleteHabit(self.form) { [weak self] result in
                 switch result {
@@ -94,7 +93,6 @@ class CreateScheduleViewController: UIViewController {
         }
         let anotherAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
             // what will happen when the user clicks the Add buttion in the UIAlert
-           
         }
         
         alert.addAction(action)
@@ -102,7 +100,6 @@ class CreateScheduleViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
         
-    
     func savePressed() {
         let title = createTitle.text
         form.title = title!
@@ -178,17 +175,3 @@ extension UIBarButtonItem {
     }
 }
 
-// TODO
-//1. Change Everyday to "Select Days" when no day is selected and "n days selected" when days have been selected "n" is the count of days array
-//2. Add a cancel button in the reminder page
-//3. Change Everyday to "Select times" when no day is selected and "n times selected" when time have been selected "n" is the count of days array
-//4. Remove nickname in choose days page and remove the title
-//5. when you come back to a page prepopulate the days with what was selected
-
-
-//Jan 13 / 21
-// add delete button to top of createSchedule nav bar
-// remove the create header if its on update
-// if its new hide button else show delete
-// how to delete a document from fire store
-// on success return to previous page
