@@ -248,6 +248,7 @@
 				ECCF213A25E52F7D00691192 /* AppDelegate.swift */,
 				ECCF213C25E52F7D00691192 /* SceneDelegate.swift */,
 				ECCF214025E52F7D00691192 /* Main.storyboard */,
+				ECCF214525E52F8F00691192 /* LaunchScreen.storyboard */,
 				ECD8421B2783BBAE00749A2B /* NetworkService */,
 				EC5C8C3D2678C5580054B304 /* Extensions */,
 				EC5C8C342678BFF10054B304 /* CollectionViewCells */,
@@ -255,7 +256,6 @@
 				EC5C8C362678C3C50054B304 /* CustomViews */,
 				ECCF215025E52FE200691192 /* ViewController */,
 				ECCF214325E52F8F00691192 /* Assets.xcassets */,
-				ECCF214525E52F8F00691192 /* LaunchScreen.storyboard */,
 				ECCF214825E52F8F00691192 /* Info.plist */,
 				EC62CA35263D6BEC00091637 /* alarmClock.json */,
 			);
