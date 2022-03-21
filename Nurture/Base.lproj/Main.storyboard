@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1099,7 +1099,7 @@
             </objects>
             <point key="canvasLocation" x="5793" y="219"/>
         </scene>
-        <!--Nuture-->
+        <!--Nurture-->
         <scene sceneID="e8c-v0-Ha0">
             <objects>
                 <viewController storyboardIdentifier="HabitCollectionViewCell" id="SEp-c5-Dxa" customClass="DashBoardViewController" customModule="Nurture" customModuleProvider="target" sceneMemberID="viewController">
@@ -1132,7 +1132,7 @@
                             <constraint firstAttribute="bottom" secondItem="Q2s-HW-35d" secondAttribute="bottom" id="zS0-sx-9on"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Nuture" largeTitleDisplayMode="always" id="epo-8X-9UW">
+                    <navigationItem key="navigationItem" title="Nurture" largeTitleDisplayMode="always" id="epo-8X-9UW">
                         <barButtonItem key="rightBarButtonItem" title="Log out" style="done" id="7Pc-80-a5I">
                             <color key="tintColor" red="0.070588235289999995" green="0.41568627450000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
