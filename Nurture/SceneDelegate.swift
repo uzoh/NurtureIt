@@ -20,6 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
         
+        window?.overrideUserInterfaceStyle = .light
+        
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         if Auth.auth().currentUser != nil {
             let controller = storyBoard.instantiateViewController(identifier: "Nav") as! UINavigationController
